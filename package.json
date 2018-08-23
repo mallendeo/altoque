@@ -1,0 +1,30 @@
+{
+	"name": "poormans-cache",
+	"version": "1.0.0",
+	"description": "A dead-simple cache for simple apps",
+	"license": "MIT",
+	"repository": "mallendeo/poormans-cache",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "standard && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"cache",
+		"ttl",
+		"simple",
+		"expire"
+	],
+	"dependencies": {
+		"exit-hook": "^2.0.0",
+		"lowdb": "^1.0.0"
+	},
+	"devDependencies": {
+		"ava": "1.0.0-beta.7",
+		"standard": "^11.0.1"
+	}
+}
