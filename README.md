@@ -40,7 +40,8 @@ Returns an object: `{ val: <value>, expires: <ms> }`.
   - **value**: string | any serializable object
 
 ### Cache.get(key, showExpire)
-Returns the entry value
+Returns the entry value.
+
 When `showExpire` is true, it returns an object: `{ val: <value>, expires: <ms> }`.
 
   - **key**: string
