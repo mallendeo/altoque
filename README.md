@@ -1,4 +1,5 @@
-# poormans-cache
+# poormans-cache [![Build Status](https://travis-ci.org/mallendeo/poormans-cache.svg?branch=master)](https://travis-ci.org/mallendeo/poormans-cache)
+
 A simple, persistent cache for dead-simple apps.
 
 ## Install
