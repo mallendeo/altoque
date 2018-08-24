@@ -1,22 +1,22 @@
-# poormans-cache [![Build Status](https://travis-ci.org/mallendeo/poormans-cache.svg?branch=master)](https://travis-ci.org/mallendeo/poormans-cache)
+# Al toque [![Build Status](https://travis-ci.org/mallendeo/altoque.svg?branch=master)](https://travis-ci.org/mallendeo/altoque)
 
 A simple, persistent cache for dead-simple apps.
 
 ## Install
 ```bash
-$ yarn add poormans-cache
-# or npm i poormans-cache
+$ yarn add altoque
+# or npm i altoque
 ```
 
 ## Usage
 
 ```js
-import Cache from 'poormans-cache'
-// or const Cache = require('poormans-cache')
+import Cache from 'altoque'
+// or const Cache = require('altoque')
 
 // Cache(<Boolean saveFile>, <String filename>)
 // e.g const cache = Cache()
-// or const cache = require('poormans-cache')()
+// or const cache = require('altoque')()
 const cache = Cache(true, './cache.json')
 
 cache.set('hello', 'there')
