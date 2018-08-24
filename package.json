@@ -1,9 +1,14 @@
 {
-	"name": "@mallendeo/poormans-cache",
-	"version": "1.0.1",
+	"name": "poormans-cache",
+	"version": "1.0.2",
 	"description": "A dead-simple cache for simple apps",
 	"license": "MIT",
-	"repository": "mallendeo/poormans-cache",
+  "repository": "mallendeo/poormans-cache",
+  "author": {
+    "name" : "Mauricio Allende",
+    "email" : "mallendeo@outlook.com",
+    "url" : "https://mallendeo.com"
+  },
 	"engines": {
 		"node": ">=8"
 	},

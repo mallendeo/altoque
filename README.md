@@ -4,17 +4,19 @@ A simple, persistent cache for dead-simple apps.
 
 ## Install
 ```bash
-$ yarn add @mallendeo/poormans-cache # or npm install
+$ yarn add poormans-cache
+# or npm i poormans-cache
 ```
 
 ## Usage
 
 ```js
-import Cache from '@mallendeo/poormans-cache'
-// or const Cache = require('@mallendeo/poormans-cache')
+import Cache from 'poormans-cache'
+// or const Cache = require('poormans-cache')
 
 // Cache(<Boolean saveFile>, <String filename>)
 // e.g const cache = Cache()
+// or const cache = require('poormans-cache')()
 const cache = Cache(true, './cache.json')
 
 cache.set('hello', 'there')
