@@ -12,8 +12,8 @@ const cache = (save, file = 'cache.json') => {
 
   const del = k => {
     if (save) {
-      db.unset(`kv[${k}]`).value()
-      db.unset(`ttl[${k}]`).value()
+      db.unset(`kv['${k}']`).value()
+      db.unset(`ttl['${k}']`).value()
       db.write()
       return
     }
@@ -27,18 +27,18 @@ const cache = (save, file = 'cache.json') => {
     let ms = null
     if (typeof ttl === 'number') {
       ms = Date.now() + ttl * 1000
-      save ? db.set(`ttl[${k}]`, ms).value() : data.ttl[k] = ms
+      save ? db.set(`ttl['${k}']`, ms).value() : data.ttl[k] = ms
     }
 
-    save ? db.set(`kv[${k}]`, v).value() : (data.kv[k] = v)
+    save ? db.set(`kv['${k}']`, v).value() : (data.kv[k] = v)
     save && db.write()
 
     return { val: v, expires: ms }
   }
 
   const get = (k, showExp) => {
-    const val = save ? db.get(`kv[${k}]`).value() : data.kv[k]
-    const expires = save ? db.get(`ttl[${k}]`).value() : data.ttl[k]
+    const val = save ? db.get(`kv['${k}']`).value() : data.kv[k]
+    const expires = save ? db.get(`ttl['${k}']`).value() : data.ttl[k]
 
     if (expires && expires < Date.now()) {
       return del(k)
