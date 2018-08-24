@@ -14,7 +14,6 @@ const cache = (save, file = 'cache.json') => {
     if (save) {
       db.unset(`kv['${k}']`).value()
       db.unset(`ttl['${k}']`).value()
-      db.write()
       return
     }
 
@@ -31,7 +30,6 @@ const cache = (save, file = 'cache.json') => {
     }
 
     save ? db.set(`kv['${k}']`, v).value() : (data.kv[k] = v)
-    save && db.write()
 
     return { val: v, expires: ms }
   }
